@@ -42,7 +42,7 @@ const serverConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: [/\.tsx?$/, /\.ts$/],
+                test: /\.ts$/,
                 loader: "ts-loader",
                 options: { compilerOptions: { module: "es2020", moduleResolution: "node" } },
             },
