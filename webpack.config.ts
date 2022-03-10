@@ -17,12 +17,7 @@ const webConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
-                options: { compilerOptions: { module: "ES2020", moduleResolution: "node" } },
-            },
-            {
-                test: /\.ts?$/,
+                test: [/\.tsx?$/, /\.ts$/],
                 loader: "ts-loader",
                 options: { compilerOptions: { module: "ES2020", moduleResolution: "node" } },
             },
@@ -47,7 +42,7 @@ const serverConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: [/\.tsx?$/, /\.ts$/],
                 loader: "ts-loader",
                 options: { compilerOptions: { module: "es2020", moduleResolution: "node" } },
             },
